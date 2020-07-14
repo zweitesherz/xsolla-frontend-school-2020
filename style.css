@@ -4,12 +4,13 @@
     }
 
     body {
-
+        background: #F0F3FF;
     }
 
+
+
+
     .concerts {
-        /*width: 720px;*/
-        /*height: 609px;*/
         width: 1440px;
         height: 1218px;
 
@@ -19,9 +20,9 @@
     }
 
     .wrapper-full {
+        position: relative;
         width: 100%;
         height: 100%;
-        position: fixed;
         top: 0;
         left: 0;
         display: flex;
@@ -118,6 +119,20 @@
         height: auto;
     }
 
+    .icon-top {
+        position: absolute;
+        width: 14px;
+        height: 18px;
+        top: 40px;
+        right: 41px;
+    }
+
+    .icon-top-svg {
+        width: 14px;
+        height: 18px;
+
+    }
+
     .card-pic__title {
         position: absolute;
        bottom: 42px;
@@ -202,6 +217,7 @@
         .card-pic__title {
             font-size: 35px;
             bottom: 5px;
+            left: 20px !important;
         }
 
         .number {
