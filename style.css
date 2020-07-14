@@ -120,7 +120,7 @@
 
     .card-pic__title {
         position: absolute;
-        top: 292px;
+       bottom: 42px;
         left: 40px;
         width: 405px;
         height: 66px;
@@ -158,4 +158,92 @@
 
     }
 
+    @media screen and (max-width:900px) {
+        .top-concerts-cards {
+            display: flex !important;
+            flex-direction: column !important;;
+            align-items: center !important;
+        }
 
+        }
+
+
+
+
+
+    @media screen and (max-width:906px) {
+
+
+        .select {
+            display: flex;
+            margin-bottom: 42px;
+            flex-wrap: wrap;
+        }
+
+        .wrapper-full {
+            width: 100%;
+            position: relative;
+        }
+
+        .concerts {
+            height: auto;
+            margin: 0 15px;
+        }
+
+        .concerts-wrapper {
+            padding: 20px;
+        }
+
+        .top-concerts-cards {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-pic__title {
+            font-size: 35px;
+            bottom: 5px;
+        }
+
+        .number {
+            width: 60px;
+            height: 60px;
+            font-size: 33px;
+        }
+
+        .header-concert {
+            font-size: 40px;
+        }
+    }
+
+    @media screen and (max-width:651px) {
+        .select-city {
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+        .h-mobile {
+            margin-right: 44px;;
+        }
+    }
+
+
+
+
+    @media screen and (max-width:1271px) {
+        .top-concerts-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+        .wrapper-full {
+            width: 100%;
+            height: auto;
+            position: inherit;
+        }
+
+        .card-pic__title {
+            font-size: 40px;
+        }
+
+    }
