@@ -33,11 +33,7 @@
     }
 
     .concerts-wrapper {
-        max-width: 1440px;
-        height: 1218px;
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top:100px;
+        padding: 100px 100px 100px 80px;
 
     }
 
@@ -94,6 +90,10 @@
         box-sizing: border-box;
         border-radius: 6px;
 
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+
     }
 
 
@@ -116,6 +116,46 @@
     .card-thumb {
         max-width: 100%;
         height: auto;
+    }
+
+    .card-pic__title {
+        position: absolute;
+        top: 292px;
+        left: 40px;
+        width: 405px;
+        height: 66px;
+
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 66px;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+    }
+
+    .number {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: 40px;
+        left: 40px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 66px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFFFFF;
+
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 6px;
+
     }
 
 
