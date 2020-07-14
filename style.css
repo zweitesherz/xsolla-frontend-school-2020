@@ -1,0 +1,121 @@
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+
+    }
+
+    .concerts {
+        /*width: 720px;*/
+        /*height: 609px;*/
+        width: 1440px;
+        height: 1218px;
+
+        background: #FFFFFF;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+        border-radius: 16px;
+    }
+
+    .wrapper-full {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        overflow: auto;
+        background: #F0F3FF;
+    }
+
+    .concerts-wrapper {
+        max-width: 1440px;
+        height: 1218px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top:100px;
+
+    }
+
+    /*.header {*/
+    /*    width: 297px;*/
+    /*    height: 66px;*/
+    /*}*/
+
+    .header-concert {
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 66px;
+        margin-bottom: 40px;
+
+        color: #2E282C;
+    }
+
+    .select {
+        display: flex;
+        margin-bottom: 42px;
+    }
+
+    .select-city {
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+    }
+
+    .select-moth {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .select-h {
+
+
+        font-family: Arial;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+        align-self: center;
+        color: #2E282C;
+        margin-right: 20px;
+    }
+
+    .select-list {
+        width: 200px;
+        height: 50px;
+
+        border: 1px solid #444444;
+        box-sizing: border-box;
+        border-radius: 6px;
+
+    }
+
+
+    .top-concerts-cards {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+    }
+
+    .top-concerts-card {
+        display: flex;
+        grid-column: span 2;
+    }
+
+    .card-pic {
+        position: relative;
+    }
+
+    .card-thumb {
+        max-width: 100%;
+        height: auto;
+    }
+
+
