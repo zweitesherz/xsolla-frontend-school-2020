@@ -292,6 +292,25 @@
         }
     }
 
-    @media screen and (max-width:640px) {
+
+                  /*MOBILE*/
+    @media screen and (max-width:625px) {
+        .top-concerts-card {
+            width: 100%;
+        }
+
+        .card-pic {
+            position: relative;
+            width: 100%;
+            height: 290px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+
+        .card-pic__title {
+            font-size: 30px;
+            line-height: 30px!important;
+        }
 
     }
