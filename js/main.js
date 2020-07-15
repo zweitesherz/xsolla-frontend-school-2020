@@ -24,6 +24,8 @@ Vue.component('concert', {
 new Vue({
     el: '#addVue',
     data: {
+  monthSelected:'',
+  sitySelected: '',
   jsonConcerts:
     [
         {
@@ -157,8 +159,29 @@ new Vue({
     ]
     },
 
-    methods: {
+    month: {
+        January:"01",
+        February:"02",
+        March:"03",
+        April:"04",
+        May:"05",
+        June:"06",
+        July:"07",
+        August:"08",
+        September:"09",
+        October:"10",
+        November:"11",
+        December:"12"
+    },
 
-    }
+   computed:  {
+       sortedArray: function() {
+           let result = [];
+           result = this.jsonConcerts.filter(object => (object.city === this.sitySelected));
+           return result;
+
+   }
+
+   }
 });
 
