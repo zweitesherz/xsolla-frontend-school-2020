@@ -20,7 +20,7 @@
                                  <div class="select-city">
                                      <p class="select-h h-mobile">City:</p>
                                      <select class="select-list" v-model="sitySelected">
-                                         <option>All</option>
+                                         <option selected="selected">All</option>
                                          <option>Amsterdam</option>
                                          <option>Sr.Petersburg</option>
                                          <option>Berlin</option>
@@ -30,8 +30,8 @@
 
                                  <div class="select-moth" >
                                      <p class="select-h">Month:</p>
-                                     <select class="select-list" v-model="monthSelected">
-                                         <option>All</option>
+                                     <select class="select-list" v-model="monthSelect">
+                                         <option selected="selected">All</option>
                                          <option>January</option>
                                          <option>February</option>
                                          <option>March</option>
@@ -44,11 +44,9 @@
                                          <option>October</option>
                                          <option>November</option>
                                          <option>December</option>
-
                                      </select>
                                  </div>
                              </div>
-                       
 
                          <div class="top-concerts-cards">
                              <concert  v-for="(concert,i) in sortedArray" :id="concert.id" :src="concert.image" :name = "concert.name" :date = "concert.date.substring(0, 2)"></concert>

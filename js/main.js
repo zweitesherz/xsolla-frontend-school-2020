@@ -24,8 +24,8 @@ Vue.component('concert', {
 new Vue({
     el: '#addVue',
     data: {
-  monthSelected:'',
-  sitySelected: '',
+  monthSelect:  'All',
+  sitySelected: 'All',
   jsonConcerts:
     [
         {
@@ -156,32 +156,39 @@ new Vue({
             "genre": "Electronic",
             "image": "https://cdn3.xsolla.com/files/uploaded/113250/0662c0df7663f71831e83be091228413.jpeg"
         }
-    ]
+    ],
+        month: {
+            January:"01",
+            February:"02",
+            March:"03",
+            April:"04",
+            May:"05",
+            June:"06",
+            July:"07",
+            August:"08",
+            September:"09",
+            October:"10",
+            November:"11",
+            December:"12"
+        },
     },
 
-    month: {
-        January:"01",
-        February:"02",
-        March:"03",
-        April:"04",
-        May:"05",
-        June:"06",
-        July:"07",
-        August:"08",
-        September:"09",
-        October:"10",
-        November:"11",
-        December:"12"
-    },
 
-   computed:  {
-       sortedArray: function() {
-           let result = [];
-           result = this.jsonConcerts.filter(object => (object.city === this.sitySelected));
+
+   computed: {
+       sortedArray: function () {
+           let result = this.jsonConcerts;
+           if (this.sitySelected !== "All") {
+               result = result.filter(object => (object.city === this.sitySelected));
+           }
+
+           if (this.monthSelect !== "All") {
+               result = this.jsonConcerts.filter(object => (object.date.substring(3, 5) === this.month[this.monthSelect]));
+           }
+
+
            return result;
-
-   }
-
+       }
    }
 });
 
