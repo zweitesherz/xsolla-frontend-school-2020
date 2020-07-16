@@ -180,13 +180,14 @@ new Vue({
            let result = this.jsonConcerts;
            if (this.sitySelected !== "All") {
                result = result.filter(object => (object.city === this.sitySelected));
+
            }
 
            if (this.monthSelect !== "All") {
-               result = this.jsonConcerts.filter(object => (object.date.substring(3, 5) === this.month[this.monthSelect]));
+               result = result.filter(object => (object.date.substring(3, 5) === this.month[this.monthSelect]));
+
            }
-
-
+           
            return result;
        }
    }
