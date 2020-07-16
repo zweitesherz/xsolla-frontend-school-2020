@@ -81,7 +81,7 @@
         line-height: 33px;
         align-self: center;
         color: #2E282C;
-        margin-right: 20px;
+        margin-right: 19px;
     }
 
     .select-list {
@@ -259,8 +259,12 @@
     .concerts {
         width: 1440px!important;
         min-height: 1218px!important;
-
+        box-shadow: none;
     }
+
+     .wrapper-full {
+         background: none;
+     }
     }
 
 
@@ -315,3 +319,13 @@
         }
 
     }
+
+
+    @media screen and (max-width:900px) {
+
+        .card-pic {
+            margin-bottom: 10px;
+        }
+
+    }
+
