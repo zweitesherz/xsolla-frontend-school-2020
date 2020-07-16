@@ -187,7 +187,7 @@ new Vue({
                result = result.filter(object => (object.date.substring(3, 5) === this.month[this.monthSelect]));
 
            }
-           
+
            return result;
        }
    }
