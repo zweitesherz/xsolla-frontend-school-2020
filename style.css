@@ -1,346 +1,322 @@
-    * {
-        padding: 0;
-        margin: 0;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+
+.concerts {
+    width: 1440px;
+    min-height: 1218px;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    background: #FFFFFF;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+}
+
+.wrapper-full {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+    background: #F0F3FF;
+}
+
+.concerts-wrapper {
+    padding: 100px 100px 100px 80px;
+}
+
+
+.header-concert {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 66px;
+    margin-bottom: 40px;
+    color: #2E282C;
+}
+
+.select {
+    display: flex;
+    margin-bottom: 42px;
+}
+
+.select-city {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+.select-moth {
+    display: flex;
+    flex-direction: row;
+}
+
+.select-h {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    align-self: center;
+    color: #2E282C;
+    margin-right: 19px;
+}
+
+.select-list {
+    width: 220px;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 1px solid #444444;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    padding-left: 22px;
+    appearance: none;
+    background: url(./img/galka.svg) no-repeat right;
+    background-position-x: calc(100% - 22px);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.top-concerts-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+
+.top-concerts-card {
+    display: flex;
+    grid-column: span 2;
+}
+
+.card-pic {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-thumb {
+    max-width: 100%;
+    height: auto;
+}
+
+.icon-top {
+    position: absolute;
+    width: 14px;
+    height: 18px;
+    top: 40px;
+    right: 41px;
+}
+
+.icon-top-svg {
+    width: 14px;
+    height: 18px;
+}
+
+.card-pic__title {
+    position: absolute;
+    bottom: 42px;
+    left: 40px;
+    height: 66px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 66px;
+    color: #FFFFFF;
+}
+
+.number {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    left: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 900px) {
+    .top-concerts-cards {
+        display: flex !important;
+        flex-direction: column !important;;
+        align-items: center !important;
     }
 
-    body {
-        font-family: Arial;
-    }
-    
-
-    .concerts {
-        width: 1440px;
-        min-height: 1218px;
-
-        margin-top: 80px;
-        margin-bottom: 80px;
-
-        background: #FFFFFF;
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
-        border-radius: 16px;
-    }
-
-    .wrapper-full {
-
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        overflow: auto;
-        background: #F0F3FF;
-    }
-
-    .concerts-wrapper {
-        padding: 100px 100px 100px 80px;
-
-    }
+}
 
 
-    .header-concert {
-        font-family: Arial;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 66px;
-        margin-bottom: 40px;
+@media screen and (max-width: 906px) {
 
-        color: #2E282C;
-    }
 
     .select {
         display: flex;
         margin-bottom: 42px;
+        flex-wrap: wrap;
     }
 
-    .select-city {
-        display: flex;
-        flex-direction: row;
-        margin-right: 20px;
+    .wrapper-full {
+        width: 100%;
+        position: relative;
     }
 
-    .select-moth {
-        display: flex;
-        flex-direction: row;
+    .concerts {
+        height: auto;
+        margin: 0 15px;
     }
 
-    .select-h {
-
-
-        font-family: Arial;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 33px;
-        align-self: center;
-        color: #2E282C;
-        margin-right: 19px;
+    .concerts-wrapper {
+        padding: 20px;
     }
-
-    .select-list {
-        width: 220px;
-        height: 50px;
-        background-color: #FFFFFF;
-
-        border: 1px solid #444444;
-        box-sizing: border-box;
-        border-radius: 6px;
-
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 33px;
-        padding-left: 22px;
-
-
-        appearance: none;
-        background: url(./img/galka.svg) no-repeat right;
-        background-position-x: calc(100% - 22px);
-        -webkit-appearance: none;
-        -moz-appearance:none;
-    }
-
-
 
     .top-concerts-cards {
-        display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
+        display: flex;
+        flex-direction: column;
     }
 
+    .card-pic__title {
+        font-size: 35px;
+        bottom: 5px;
+        /*left: 20px !important;*/
+        line-height: 45px !important;
+    }
+
+    .number {
+        width: 60px;
+        height: 60px;
+        font-size: 33px;
+    }
+
+    .header-concert {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    .select-city {
+        margin-right: 20px;
+        margin-bottom: 15px;
+    }
+
+    .h-mobile {
+        margin-right: 44px;;
+    }
+}
+
+
+@media screen and (max-width: 651px) {
+
+
+    .concerts {
+        width: 1440px !important;
+        min-height: 1218px !important;
+        box-shadow: none;
+    }
+
+    .wrapper-full {
+        background: none;
+    }
+}
+
+
+@media screen and (max-width: 1271px) {
+    .top-concerts-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .wrapper-full {
+        width: 100%;
+        height: auto;
+        position: inherit;
+    }
+
+    .card-pic__title {
+        font-size: 40px;
+        line-height: 45px !important;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .concerts {
+        max-width: fit-content !important;
+    }
+}
+
+
+/*MOBILE*/
+@media screen and (max-width: 625px) {
     .top-concerts-card {
-        display: flex;
-        grid-column: span 2;
+        width: 100%;
     }
 
     .card-pic {
         position: relative;
-        width: 600px;
-        height: 400px;
+        width: 100%;
+        height: 290px;
         background-size: cover;
         background-position: center;
-
-    }
-
-    .card-thumb {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .icon-top {
-        position: absolute;
-        width: 14px;
-        height: 18px;
-        top: 40px;
-        right: 41px;
-    }
-
-    .icon-top-svg {
-        width: 14px;
-        height: 18px;
-
+        margin-bottom: 10px;
     }
 
     .card-pic__title {
-        position: absolute;
-       bottom: 42px;
-        left: 40px;
-        /*width: 405px;*/
-        height: 66px;
-
-        font-family: Avenir;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 48px;
-        line-height: 66px;
-        /* identical to box height */
-
-
-        color: #FFFFFF;
+        font-size: 30px;
+        line-height: 30px !important;
     }
 
-    .number {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        top: 40px;
-        left: 40px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 48px;
-        line-height: 66px;
+}
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #FFFFFF;
 
-        border: 2px solid #FFFFFF;
-        box-sizing: border-box;
-        border-radius: 6px;
+@media screen and (max-width: 900px) {
 
+    .card-pic {
+        margin-bottom: 10px;
     }
 
-    @media screen and (max-width:900px) {
-        .top-concerts-cards {
-            display: flex !important;
-            flex-direction: column !important;;
-            align-items: center !important;
-        }
+}
 
-        }
-
-
-
-
-
-    @media screen and (max-width:906px) {
-
-
-        .select {
-            display: flex;
-            margin-bottom: 42px;
-            flex-wrap: wrap;
-        }
-
-        .wrapper-full {
-            width: 100%;
-            position: relative;
-        }
-
-        .concerts {
-            height: auto;
-            margin: 0 15px;
-        }
-
-        .concerts-wrapper {
-            padding: 20px;
-        }
-
-        .top-concerts-cards {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-pic__title {
-            font-size: 35px;
-            bottom: 5px;
-            /*left: 20px !important;*/
-            line-height: 45px!important;
-        }
-
-        .number {
-            width: 60px;
-            height: 60px;
-            font-size: 33px;
-        }
-
-        .header-concert {
-            font-size: 40px;
-        }
+/*IPHONE 5 SE*/
+@media screen and (max-width: 320px)  and (max-height: 568px) {
+    .select-list {
+        width: 155px;
+        font-size: 16px;
+        background-position-x: calc(100% - 16px);
     }
 
-    @media screen and (max-width:651px) {
-        .select-city {
-            margin-right: 20px;
-            margin-bottom: 15px;
-        }
-        .h-mobile {
-            margin-right: 44px;;
-        }
+    .header-concert {
+        font-size: 35px;
+        margin-bottom: 10px;
     }
-
-
-    @media screen and (max-width:651px) {
-
-
-
-    .concerts {
-        width: 1440px!important;
-        min-height: 1218px!important;
-        box-shadow: none;
-    }
-
-     .wrapper-full {
-         background: none;
-     }
-    }
-
-
-
-
-    @media screen and (max-width:1271px) {
-        .top-concerts-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
-        }
-
-        .wrapper-full {
-            width: 100%;
-            height: auto;
-            position: inherit;
-        }
-
-        .card-pic__title {
-            font-size: 40px;
-            line-height: 45px!important;
-        }
-
-    }
-
-    @media screen and (max-width:500px) {
-        .concerts {
-            max-width: fit-content!important;
-        }
-    }
-
-
-                  /*MOBILE*/
-    @media screen and (max-width:625px) {
-        .top-concerts-card {
-            width: 100%;
-        }
-
-        .card-pic {
-            position: relative;
-            width: 100%;
-            height: 290px;
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 10px;
-        }
-
-        .card-pic__title {
-            font-size: 30px;
-            line-height: 30px!important;
-        }
-
-    }
-
-
-    @media screen and (max-width:900px) {
-
-        .card-pic {
-            margin-bottom: 10px;
-        }
-
-    }
-
-    /*IPHONE 5 SE*/
-    @media screen and (max-width:320px)  and (max-height: 568px){
-        .select-list {
-            width: 155px;
-            font-size: 16px;
-            background-position-x: calc(100% - 16px);
-        }
-        .header-concert {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-    }
+}
 

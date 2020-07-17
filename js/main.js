@@ -25,7 +25,7 @@ new Vue({
     el: '#addVue',
     data: {
         monthSelect:  'All',
-        sitySelected: 'All',
+        citySelected: 'All',
         jsonConcerts: [],
         month: {
             January:"01",
@@ -46,8 +46,8 @@ new Vue({
    computed: {
        sortedArray: function () {
            let result = this.jsonConcerts;
-           if (this.sitySelected !== "All") {
-               result = result.filter(object => (object.city === this.sitySelected));
+           if (this.citySelected !== "All") {
+               result = result.filter(object => (object.city === this.citySelected));
 
            }
 
