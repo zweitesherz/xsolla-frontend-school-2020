@@ -1,9 +1,12 @@
 import React from 'react';
 
-// import styles from './styles.css';
+import styles from './styles.css';
+
+import Concerts from "./Concerts";
 
 const App = () => (
-    <div>Hello Xsolla School</div>
+    <div className={styles.wrapperFull}>
+        <Concerts/>
+    </div>
 );
-
 export default App;
