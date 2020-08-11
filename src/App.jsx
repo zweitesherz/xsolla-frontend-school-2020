@@ -10,7 +10,6 @@ export const App = () => {
 
     const [countries, setCountries] = useState([]);
     const [load, setLoad] = useState(false);
-    const [error, setError] = useState('');
 
     useEffect(() => {
         axios.get('/cards.json')
@@ -18,17 +17,16 @@ export const App = () => {
                 setCountries(res.data);
                 setLoad(true);
             })
-            .catch(err => {
-                setError(err.message);
-                setLoad(true)
-            })
+
     }, []);
 
-
     if (load) {
-        return (<div className={styles.wrapperFull}>
-            {error ? <li>{error.message}</li>  :  <Concerts/>}
-        </div>);
+        return (
+            <div className={styles.wrapperFull}>
+                <Concerts/>
+
+            </div>)
+
     } else {
         return (
             <div>
