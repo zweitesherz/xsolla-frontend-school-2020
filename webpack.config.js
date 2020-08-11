@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const jsonFile = require('./src/cards.json');
 
 module.exports = (env, argv) => ({
     entry: './src/index.jsx',
@@ -13,6 +15,15 @@ module.exports = (env, argv) => ({
     },
     devtool: argv.mode === 'production' ? 'hidden-source-map' : 'source-map',
     plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+            { from: 'src/cards.json',
+              to:  path.join(__dirname, 'dist')
+            },
+            ],
+        }
+       ),
+
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
@@ -20,6 +31,15 @@ module.exports = (env, argv) => ({
     ],
     module: {
         rules: [
+            // {
+            //     test: /\.json$/,
+            //     loader: 'file-loader',
+            //     options: {
+            //         outputPath: './images',
+            //         name: "[name].[ext]"}
+            //
+            // },
+
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,

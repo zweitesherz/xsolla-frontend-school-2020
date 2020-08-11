@@ -24,6 +24,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.1",
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
@@ -36,6 +37,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "axios-react": "^1.1.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
