@@ -3,18 +3,16 @@ import React from 'react';
 import styles from './styles.css';
 import HeaderConcert from "./HeaderConcert";
 import Select from "./Select";
-import TopCards from "./TopCards";
-import Card from "./TopCards";
 
-function Concerts() {
+import Card from "./Card";
+
+function Concerts({people}) {
     return (
         <div className={styles.concerts}>
             <div className={styles.concertsWrapper}>
                 <HeaderConcert/>
                 <Select/>
-                <TopCards>
-                    <Card/>
-                </TopCards>
+                { people.map(person => <Card value={person.name} key={person.id} src={person.image}/>)}
             </div>
         </div>
     )
