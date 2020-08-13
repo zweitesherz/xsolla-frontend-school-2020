@@ -1,9 +1,7 @@
 import React from 'react';
-
 import styles from './styles.css';
 import HeaderConcert from "./HeaderConcert";
 import Select from "./Select";
-
 import Card from "./Card";
 
 function Concerts({people}) {
@@ -12,7 +10,9 @@ function Concerts({people}) {
             <div className={styles.concertsWrapper}>
                 <HeaderConcert/>
                 <Select/>
-                { people.map(person => <Card value={person.name} key={person.id} src={person.image}/>)}
+                <div className={styles.topCards}>
+                    { people.map(person => <Card value={person.name} key={person.id} src={person.image} date={ person.date.substring(0, 2) } />)}
+                </div>
             </div>
         </div>
     )

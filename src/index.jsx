@@ -7,5 +7,5 @@ import App from './App';
 
 render(
     <App />,
-    document.getElementsByTagName('body')[0]
+    document.getElementById('root')
 )
