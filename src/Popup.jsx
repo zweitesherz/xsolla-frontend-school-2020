@@ -2,15 +2,17 @@ import React, {Fragment} from 'react';
 import styles from './styles.css';
 
 
-const Popup = ({people})=> {
+const Popup = ({ id, name, city,date})=> {
 
     return (
+
        <Fragment>
-               <div className={styles.popup} key={people.map(person => person).id}>
-                   <div>Name: {people.map(person => person).name}</div>
-                   <div>Data: {people.map(person => person).date}</div>
-                   <div>City:{people.map(person => person).city}</div>
+               <div className={styles.popup} key={id}>
+                   <div>Name: {name}</div>
+                   <div>Data: {date}</div>
+                   <div>City: {city}</div>
                </div>
+           ))}
        </Fragment>
 
     )
