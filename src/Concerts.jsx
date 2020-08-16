@@ -19,7 +19,8 @@ const Concerts = ({people}) => {
                                   value={person.name}
                                   key={person.id}
                                   src={person.image}
-                                  date={ person.date.substring(0, 2) } />
+                                  date={ person.date.substring(0, 2)}
+                                  id={person.id}/>
                             )}
                     </div>
                 </div>

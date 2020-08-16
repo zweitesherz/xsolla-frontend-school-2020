@@ -1,18 +1,14 @@
 import React, {Fragment} from 'react';
+import {Link} from 'react-router-dom';
 
 import styles from './styles.css';
 import Vector from './img/Vector.svg';
-import {NavLink} from "react-router-dom";
 
+function Card({ people, value, src, date,id} ) {
 
-function Card({ people, value, src, date} ) {
-
-    const concert = people.map(person =>
-        person
-    )
     return (
         <Fragment>
-            <NavLink to={`/link/${concert.id}`} key={concert.id} className={styles.topConcertsCard}>
+            <Link to={`/link/${id}`} key={id} className={styles.topConcertsCard}>
                 <a className={styles.cardPic} style={{backgroundImage: `url(${src})`}}>
                     <p className={styles.cardPicTitle}>{value}</p>
                     <div className={styles.number} >{date}</div>
@@ -20,7 +16,7 @@ function Card({ people, value, src, date} ) {
                         <img className={styles.iconTopSvg} src={Vector}/>
                     </div>
                 </a>
-            </NavLink>
+            </Link>
         </Fragment>
 
     )

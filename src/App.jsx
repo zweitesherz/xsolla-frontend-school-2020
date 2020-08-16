@@ -31,12 +31,12 @@ export default class PersonList extends React.Component {
         return (
 
             <BrowserRouter>
-                <div className={styles.wrapperFull}>
 
-                    <Route path={`/link/${concert.id}`}>
-                       <Popup people={this.state.people} person={concert}/>
+                <div className={styles.wrapperFull}>
+                    <Route exact path={`/link/${this.state.people.map(person => person).id}`}>
+                       <Popup people={this.state.people}/>
                     </Route>
-                    <Concerts people={this.state.people} person={concert}/>
+                    <Concerts people={this.state.people}/>
                 </div>
             </BrowserRouter>
 
