@@ -21,6 +21,7 @@
   "homepage": "https://github.com/zweitesherz/xsolla-frontend-school-2020#readme",
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -40,6 +41,7 @@
     "axios": "^0.19.2",
     "axios-react": "^1.1.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   }
 }

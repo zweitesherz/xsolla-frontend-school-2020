@@ -11,6 +11,15 @@ body {
     background-color: red;
 }
 
+._22Z68EmStHAESNjVSsgUxx {
+    position: fixed;
+    top: 10px;
+    background: white;
+    z-index: 400;
+    width: 250px;
+
+}
+
 ._2B0FxRf9hCGHoAs1AVsC1l {
     width: 1440px;
     min-height: 1218px;

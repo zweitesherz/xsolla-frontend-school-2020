@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const jsonFile = require('./src/cards.json');
 
 module.exports = (env, argv) => ({
     entry: './src/index.jsx',
@@ -31,19 +30,16 @@ module.exports = (env, argv) => ({
     ],
     module: {
         rules: [
-            // {
-            //     test: /\.json$/,
-            //     loader: 'file-loader',
-            //     options: {
-            //         outputPath: './images',
-            //         name: "[name].[ext]"}
-            //
-            // },
 
             {
-                test: /\.jsx?$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: "babel-loader",
+                // query: {
+                //     presets: ['@babel/preset-env', '@babel/preset-react'],
+                //     plugins: ['@babel/plugin-proposal-class-properties']
+                // }
+
             },
             {
                 test: /\.(png|jpe?g|gif|svg)$/i,
