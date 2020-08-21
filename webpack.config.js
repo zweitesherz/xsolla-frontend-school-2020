@@ -8,6 +8,7 @@ module.exports = (env, argv) => ({
     output: {
         filename: 'main.js',
         path: path.join(__dirname, 'dist'),
+        publicPath: '/'
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -65,6 +66,7 @@ module.exports = (env, argv) => ({
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: {index: '/'},
         port: 9000
     }
 });

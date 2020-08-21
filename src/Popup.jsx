@@ -12,7 +12,6 @@ const Popup = ({ id, name, city,date})=> {
                    <div>Data: {date}</div>
                    <div>City: {city}</div>
                </div>
-           ))}
        </Fragment>
 
     )

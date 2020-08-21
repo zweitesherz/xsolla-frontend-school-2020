@@ -34,7 +34,7 @@ export default class PersonList extends React.Component {
 
                 <div className={styles.wrapperFull}>
                     {this.state.people.map(person => (
-                    <Route exact path={`/link/${person.id}`}>
+                    <Route exact path={`/link/${person.id}`}  key={person.id}>
                        <Popup people={this.state.people} id={person.id} name={person.name} city={person.city} date={person.date}/>
                     </Route>
                         ))}
