@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>generate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <script>
+        function gen(e) {
+            const N = +event.target.value;
+
+            const events = Array(N).fill().map((i) => ({
+
+                "id": i,
+                "name": faker.lorem.words(),
+                "date": faker.date.future().toLocaleDateString('ru-RU'),
+                "city": faker.address.city(),
+                "genre": faker.lorem.word(),
+                "image": faker.image.abstract(700, 500)
+            }))
+
+            document.getElementById('data').value= JSON.stringify(events,null,' ')
+        }
+    </script>
+</head>
+    <body>
+    <label for="num"><input type="number" id="num" onchange="gen(event)"/>
+        <hr/>
+        <textarea id="data"></textarea>
+    </label>
+    </body>
+</html>
