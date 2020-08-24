@@ -1,14 +1,9 @@
 import React, {Fragment} from 'react';
-import faker from 'Faker';
-
-
 import styles from './styles.css';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Concerts from "./Concerts";
-
 import axios from 'axios';
 import Popup from "./Popup";
-
 export default class PersonList extends React.Component {
 
     constructor(props) {
@@ -16,39 +11,16 @@ export default class PersonList extends React.Component {
         this.state = { people: []};
     }
 
-
     componentDidMount() {
-        // axios.get('/cards.json')
-        //     .then(res => {
-        //         const people= res.data;
-        //         this.setState({ people});
-        //     })
-
-
-        const generate = Array(12).fill().map(( a,i) => ({
-
-            "id": i,
-            "name": faker.Lorem.words(1).toString(),
-            "date": "11",
-            "city": faker.Address.city(),
-            "genre": faker.Lorem.words(1).toString(),
-            "image": `${faker.Image.abstractImage()}?random=${Date.now()}`
-        }))
-        //console.log(generate)
-       //const people = JSON.stringify(generate,null,' ')
-
-        const people = generate;
-
-        this.setState({ people});
-        //this.state.people = generate;
-
+        axios.get('/cards.json')
+            .then(res => {
+                const people = res.data.cards;
+                this.setState({people});
+            })
     }
 
     render() {
-        // const concert =   this.state.people.map(person =>
-        //     person
-        // )
-        console.log( this.state.people)
+
         return (
 
             <BrowserRouter>
@@ -61,7 +33,6 @@ export default class PersonList extends React.Component {
                     <Concerts people={this.state.people}/>
                 </div>
             </BrowserRouter>
-
         )
     }
 }

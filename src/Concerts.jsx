@@ -18,7 +18,7 @@ const Concerts = ({people}) => {
                             <Card people={people}
                                   value={person.name}
                                   src={person.image}
-                                  date={ person.date.substring(0, 2)}
+                                  date={ person.date}
                                   id={person.id}/>
                             )}
                     </div>
