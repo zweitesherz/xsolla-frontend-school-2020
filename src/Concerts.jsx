@@ -1,11 +1,11 @@
 import React, {Fragment} from 'react';
-import {NavLink} from 'react-router-dom';
+import Plus from "./Plus";
 import styles from './styles.css';
 import HeaderConcert from "./HeaderConcert";
 import Select from "./Select";
 import Card from "./Card";
 
-const Concerts = ({people}) => {
+const Concerts = ({people, addCard}) => {
 
     return (
         <Fragment>
@@ -23,6 +23,7 @@ const Concerts = ({people}) => {
                             )}
                     </div>
                 </div>
+                <Plus cards={people} addCard={addCard}/>
             </div>
         </Fragment>
     )

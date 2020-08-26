@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Concerts from "./Concerts";
 import axios from 'axios';
 import Popup from "./Popup";
+import Plus from "./Plus";
 export default class PersonList extends React.Component {
 
     constructor(props) {
@@ -11,11 +12,19 @@ export default class PersonList extends React.Component {
         this.state = { people: []};
     }
 
+    addCard(a) {
+        this.setState({
+            people: a
+        });
+    }
+
+
     componentDidMount() {
         axios.get('/cards.json')
             .then(res => {
                 const people = res.data.cards;
                 this.setState({people});
+
             })
     }
 
@@ -30,7 +39,7 @@ export default class PersonList extends React.Component {
                        <Popup people={this.state.people} id={person.id} name={person.name} city={person.city} date={person.date}/>
                     </Route>
                         ))}
-                    <Concerts people={this.state.people}/>
+                    <Concerts people={this.state.people} addCard={this.addCard.bind(this)}/>
                 </div>
             </BrowserRouter>
         )
