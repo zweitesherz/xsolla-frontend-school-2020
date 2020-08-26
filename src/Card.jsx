@@ -14,7 +14,7 @@ function Card({ value, src, date, id, deleteCard} ) {
                 <div className={styles.cardPic} style={{backgroundImage: `url(${src})`}}>
                     <p className={styles.cardPicTitle}>{value}</p>
                     <div className={styles.number} >{date}</div>
-                    <div className={styles.iconTop}  >
+                    <div className={styles.iconTop}>
                         <img className={styles.iconTopSvg} src={Krest} alt={'img'} onClick={deleteCard} data-id={id}/>
                     </div>
                 </div>

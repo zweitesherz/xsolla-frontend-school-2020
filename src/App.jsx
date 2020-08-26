@@ -19,6 +19,7 @@ export default class PersonList extends React.Component {
     }
 
     deleteCard(e) {
+        const axios = require('axios');
         const id = Number(e.currentTarget.dataset.id)
         const newAr = this.state.people.filter(function (card) {
             return card.id !== id;
@@ -26,6 +27,14 @@ export default class PersonList extends React.Component {
         this.setState({
             people: newAr
         });
+
+        axios.delete('http://localhost:3000/cards/'+id)
+            .then(resp => {
+                console.log(resp.data)
+            }).catch(error => {
+            console.log(error);
+        });
+
     }
 
     componentDidMount() {
