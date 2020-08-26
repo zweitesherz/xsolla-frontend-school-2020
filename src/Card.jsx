@@ -5,9 +5,8 @@ import styles from './styles.css';
 // import Vector from './img/Vector.svg';
 import Krest from './img/krestik.svg';
 
-function Card({ value, src, date,id} ) {
+function Card({ value, src, date, id, deleteCard} ) {
 
-    
 
     return (
         <Fragment>
@@ -15,8 +14,8 @@ function Card({ value, src, date,id} ) {
                 <div className={styles.cardPic} style={{backgroundImage: `url(${src})`}}>
                     <p className={styles.cardPicTitle}>{value}</p>
                     <div className={styles.number} >{date}</div>
-                    <div className={styles.iconTop}>
-                        <img className={styles.iconTopSvg} src={Krest} alt={'img'}/>
+                    <div className={styles.iconTop}  >
+                        <img className={styles.iconTopSvg} src={Krest} alt={'img'} onClick={deleteCard} data-id={id}/>
                     </div>
                 </div>
             </Link>

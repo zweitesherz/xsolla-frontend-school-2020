@@ -18,6 +18,15 @@ export default class PersonList extends React.Component {
         });
     }
 
+    deleteCard(e) {
+        const id = Number(e.currentTarget.dataset.id)
+        const newAr = this.state.people.filter(function (card) {
+            return card.id !== id;
+        })
+        this.setState({
+            people: newAr
+        });
+    }
 
     componentDidMount() {
         axios.get('/cards.json')
@@ -39,7 +48,7 @@ export default class PersonList extends React.Component {
                        <Popup people={this.state.people} id={person.id} name={person.name} city={person.city} date={person.date}/>
                     </Route>
                         ))}
-                    <Concerts people={this.state.people} addCard={this.addCard.bind(this)}/>
+                    <Concerts people={this.state.people} addCard={this.addCard.bind(this)} deleteCard={this.deleteCard.bind(this)}/>
                 </div>
             </BrowserRouter>
         )

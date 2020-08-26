@@ -5,7 +5,7 @@ import HeaderConcert from "./HeaderConcert";
 import Select from "./Select";
 import Card from "./Card";
 
-const Concerts = ({people, addCard}) => {
+const Concerts = ({people, addCard, deleteCard}) => {
 
     return (
         <Fragment>
@@ -19,7 +19,10 @@ const Concerts = ({people, addCard}) => {
                                   value={person.name}
                                   src={person.image}
                                   date={ person.date}
-                                  id={person.id}/>
+                                  id={person.id}
+                                  deleteCard={deleteCard}
+                            />
+
                             )}
                     </div>
                 </div>
